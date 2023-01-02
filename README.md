@@ -1,12 +1,6 @@
-# Getting Started with Create React App
+# React CRUD
+I practice CRUD with React.js (TypeScript). I use [this repository(and branch)](https://github.com/You-saku/echo-docker/tree/20221123) for Web API.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Learn descriptions
-I learn react grammer.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Requirement
+ - npx:8.1.0
+ - yarn:1.22.18
