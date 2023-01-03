@@ -69,7 +69,11 @@ const Users = () => {
             <ul>
                 {
                     users.map(user => 
-                    <li key={user.ID}> 名前：{user.name}様 年齢：{user.age} <button onClick={() => userDelete(user.ID)}>削除</button></li>
+                        <li key={user.ID}> 
+                            名前：{user.name}様,
+                            年齢：{user.age}
+                            <button onClick={() => userDelete(user.ID)}>削除</button>
+                        </li>
                     )
                 }
             </ul>
