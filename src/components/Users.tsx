@@ -1,8 +1,9 @@
 import {useState, useEffect, useRef} from 'react'
-import User from '../../../data/User'
+import { Link } from "react-router-dom";
+import UserType from '../data/UserType';
 
 const Users = () => {
-    const [users, setPosts] = useState<User[]>([]);
+    const [users, setUsers] = useState<UserType[]>([]);
 
     // get
     useEffect(() => {
@@ -15,7 +16,7 @@ const Users = () => {
         })
         .then(res => res.json())
         .then(data => {
-            setPosts(data)
+            setUsers(data)
         });
     },[])
 
@@ -58,25 +59,26 @@ const Users = () => {
             })
             .then(res => res.json())
             .then(data => {
-                setPosts(data)
+                setUsers(data)
             });
         }
     };
 
     return (
         <div>
+            <Link to = '/'>ホームへ戻る</Link>
             <h2>ユーザー一覧</h2>
-            <ul>
+                <ul>
                 {
-                    users.map(user => 
-                        <li key={user.ID}> 
-                            名前：{user.name}様,
-                            年齢：{user.age}
+                    users.map(user =>
+                        <li key={user.ID}>
+                            {user.name}
+                            <Link to = {user.ID.toString()}>詳細情報</Link>
                             <button onClick={() => userDelete(user.ID)}>削除</button>
                         </li>
                     )
                 }
-            </ul>
+                </ul>
             <h2>ユーザー作成</h2>
             <form>
                 <input ref={postName} type="text" placeholder='名前'/>
