@@ -9,6 +9,7 @@ I practice CRUD with React.js (TypeScript). I use [this repository(and branch)](
  * [fetch sample](https://www.bezkoder.com/react-fetch-example/#Source_Code)
  * [react-router(Doc)](https://v5.reactrouter.com/web/guides/quick-start)
  * [react-router(諸々参考にした)](https://reffect.co.jp/react/react-router)
+ * [reactのinputについて](https://m-kenomemo.com/react-form/)
 
 ## Version
  * react:18.1.0

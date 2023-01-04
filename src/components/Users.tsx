@@ -26,14 +26,13 @@ const Users = () => {
     const postEmail = useRef<HTMLInputElement>(null!)
     const postAge = useRef<HTMLInputElement>(null!)
     const userCreate = (e: any) => {
+        // https://developer.mozilla.org/ja/docs/Web/API/Event/preventDefault
         e.preventDefault();
         const postData = {
             name: postName.current.value,
             email: postEmail.current.value,
             age: parseInt(postAge.current.value), // 何故かstringのままになってしまうので
         };
-
-        console.log(postData);
 
         if (window.confirm("ユーザーを作成しますか?")) {
             fetch('http://localhost:80/api/users', 
