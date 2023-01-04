@@ -1,9 +1,9 @@
 // Userの型宣言
-type User = {
+type UserType = {
     ID: number,
     name: string,
     email: string,
     age: number,
 }
 
-export default User
+export default UserType
